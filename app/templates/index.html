@@ -13,9 +13,18 @@
 <!-- Content -->
 {% block content %}
 
-<h3>Business News</h3>
+<!-- <h3>Business News</h3>
 <ul>
     {{macro.displaySourceList(business)}}
-</ul>
+</ul> -->
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+       <h3 style="text-align: center;">Business News</h3>
+    </div>
+    <div class="panel-body">
+        {{macro.displaySourceList(business)}}
+    </div>
+</div>
 
 {% endblock %}

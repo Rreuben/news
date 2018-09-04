@@ -13,17 +13,17 @@
 
 {% macro displayArticles(article_list) %}
 
-    {% for source in article_list %}
+    {% for article in article_list %}
 
-        <div class="row">
-            <div class="col-md-6 article-image" style="display: inline-block; height: 250px; background: url({{article.image_url}}) no repeat center center"></div>
-            <div class="col-md-6 article">
-                <h3>{{article.title}}</h3><h5>by {{article.author}}</h5>
-                <p class="description">{{article.description}} <a href="{{article.url}}">Read more...</a></p>
-                <p class="time"><b>Published on {{article.publish_time}}</b></p>
-            </div>
-        </div> 
-
+    <div class="well" style="height: 290px; margin: 15px;">
+        <div class="col-md-6 article-image" style="display: inline-block; height: 250px; background: url({{article.image_url}}) no-repeat center;"></div>
+        <div class="col-md-6 article">
+            <h3>{{article.title}}</h3><h5>by {{article.author}}</h5>
+            <p class="description">{{article.description}} <a href="{{article.url}}">Read more</a></p>
+            <p class="time" style="float: right;"><b>{{article.publish_time}}</b></p>
+        </div>
+    </div>
+            
     {% endfor %}
 
 {% endmacro %}
