@@ -1,4 +1,4 @@
-# News Highlights
+# News Highlight
 
 <p align = "center">
     <b>By Rreuben</b>  
