@@ -21,5 +21,7 @@ def create_app(config_name):
     # Registering th blueprint
     from .main import MAIN as main_blueprint
     app.register_blueprint(main_blueprint)
+    from .requests import configure_request
+    configure_request(app)
 
     return app
