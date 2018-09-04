@@ -2,7 +2,7 @@
 
 from flask import render_template
 from . import MAIN
-from ..requests import get_articles
+from ..requests import get_articles, get_sources
 
 @MAIN.route('/')
 def index():
@@ -11,7 +11,21 @@ def index():
     View root function that returns the index page and its data
     '''
 
-    return render_template('index.html')
+    title = 'Pew News - The #1 News Source Out There'
+
+    # getting source categories
+    business_news = get_sources('business')
+    entertainment_news = get_sources('entertainment')
+    gaming_news = get_sources('gaming')
+    general_news = get_sources('general')
+    music_news = get_sources('music')
+    science_news = get_sources('science')
+    technology_news = get_sources('technology')
+
+    return render_template('index.html', title=title, business=business_news,
+                           entertainment=entertainment_news, gaming=gaming_news,
+                           general=general_news, music=music_news,
+                           science=science_news, technology=technology_news)
 
 
 @MAIN.route('/news/<id>')
