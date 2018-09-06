@@ -1,7 +1,7 @@
 '''Module that contains startup configurations'''
 
-from app import create_app
 from flask_script import Manager, Server
+from app import create_app
 
 # instances for the create_app
 APP = create_app('development')
