@@ -45,7 +45,7 @@ After installing these, you can run the app.
 #### Alternatively
 
 * Open browser (Mozilla Firefox Recommended)
-* Visit the live [website](https://rreuben-news.herokuapp.com)
+* Visit the live [website](https://pewnews.herokuapp.com/)
 
 #### Further Exploration
 
