@@ -37,6 +37,5 @@ def news(id):
 
     title = f'{id}'
     article = get_articles(id)
-    highlight = 'Working!!!'
 
-    return render_template('news.html', title=title, article=article, highlight=highlight)
+    return render_template('news.html', title=title, article=article)
