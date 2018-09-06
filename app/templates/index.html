@@ -13,6 +13,20 @@
 <!-- Content -->
 {% block content %}
 
+<!-- <h3>Business News</h3>
+<ul>
+    {{macro.displaySourceList(business)}}
+</ul> -->
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+       <h3 style="text-align: center;">General News</h3>
+    </div>
+    <div class="panel-body">
+        {{macro.displaySourceList(general)}}
+    </div>
+</div>
+
 <div class="panel panel-default">
     <div class="panel-heading">
        <h3 style="text-align: center;">Business News</h3>
@@ -33,14 +47,30 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-       <h3 style="text-align: center;">Gaming News</h3>
+       <h3 style="text-align: center;">Science News</h3>
     </div>
     <div class="panel-body">
-        {{macro.displaySourceList(gaming)}}
+        {{macro.displaySourceList(science)}}
     </div>
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 style="text-align: center;">Sports News</h3>
+    </div>
+    <div class="panel-body">
+        {{macro.displaySourceList(sports)}}
+    </div>
+</div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 style="text-align: center;">Technology News</h3>
+    </div>
+    <div class="panel-body">
+        {{macro.displaySourceList(technology)}}
+    </div>
+</div>
 
 
 
