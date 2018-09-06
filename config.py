@@ -11,6 +11,7 @@ class Config:
     SOURCE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
     ARTICLE_URL = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'
     API_KEY = os.environ.get('API_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 class ProdConfig(Config):
