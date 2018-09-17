@@ -24,23 +24,44 @@ The app will:
 * Bootstrap (for styling)
 * HTML 5
 
-View the source code at [GitHub](https://github.com/Rreuben/news-highlight)
+View the source code at [GitHub](https://github.com/Rreuben/news)
 
 #### Installation/Setup
 You need to have Python 3.6 installed to run this program.
 
 `$ git clone <this-repository>`<br />
-`$ virtualenv -p python virtual`<br />
-`$ source virtual/bin/acivate`
 
-In the virtual environment run these codes:
+Create a virtual enironment and activate it.
 
-`(virtual)$ python3.6 -m pip install flask`<br />
-`(virtual)$ python3.6 -m pip install flask-bootstrap`<br />
-`(virtual)$ python3.6 -m pip install flask-wtf`<br />
-`(virtual)$ python3.6 -m pip install flask-script`
+`$ virtualenv -p python`<br />
+`$ source virtual/bin/acivate` and `(virtual)$ deactivate` is to deactivate the environment.
 
-After installing these, you can run the app.
+In the virtual environment:
+
+`(virtual)$ pip install -r requirements.txt`<br />
+
+Running the app.
+
+    Prepare the environment variables.
+    
+        (virtual)$exportDATABASE_URL='postgresqlpsycopg2://username:password@localhost/pitch'`<br/>
+        `(virtual)$ export SECRET_KEY='Your secret key'
+
+    Run Database Migrations.
+
+        (virtual)$ python manage.py db init
+        (virtual)$ python manage.py db migrate -m "Initial migration"
+        (virtual)$ python manage.py db upgrade
+
+    Run the app.
+
+        (virtual)$ touch start.sh
+
+        Put #!/usr/bin/env bash as the first line in start.sh
+        Put python3.6 manage.py server as the second line in start.sh
+
+        (virtual)$ chmod a+x start.sh
+        (virtual)$ ./start.sh
 
 #### Alternatively
 
@@ -56,5 +77,5 @@ After installing these, you can run the app.
 ***
 
 <p align = "center">
-    <a href = "https://github.com/Rreuben/news-highlight/blob/master/LICENSE">LICENSE</a>
+    <a href = "https://github.com/Rreuben/news/blob/master/LICENSE">LICENSE</a>
 </p>
